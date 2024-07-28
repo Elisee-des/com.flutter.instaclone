@@ -68,4 +68,12 @@ class Authentication {
       throw exceptions(e.message.toString());
     }
   }
+
+    Future<void> signOut() async {
+    try {
+      await _auth.signOut();
+    } catch (e) {
+      print(e.toString());
+    }
+  }
 }
